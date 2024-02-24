@@ -6,6 +6,4 @@
 
 [Covent Garden Social Club](https://coventgardensocialclub.co.uk/)
 
-<hr>
-
 The purpose of this project is put in practice all the topics and teachings from **Codecademy** platform as a result of a project practice
