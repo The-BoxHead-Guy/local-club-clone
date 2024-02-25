@@ -15,3 +15,17 @@
   --e-global-typography-accent-font-weight: 500;
 }
 
+@font-face {
+  font-family: "Lakesides";
+  src: url(/resources/fonts/Lakeside/Lakeside-Regular.eot);
+  src: url(/resources/fonts/Lakeside/Lakeside-Regular.eot)
+      format("embedded-opentype"),
+    url(/resources/fonts/Lakeside/Lakeside-Regular.woff2) format("woff2"),
+    url(/resources/fonts/Lakeside/Lakeside-Regular.woff) format("woff"),
+    url(/resources/fonts/Lakeside/Lakeside-Regular.ttf) format("truetype");
+}
+
+html {
+  /* 1rem = 10px [Experimental] */
+  font-size: 62.5%;
+}
