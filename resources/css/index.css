@@ -1,18 +1,18 @@
 :root {
-  --e-global-color-primary: #ffffff;
-  --e-global-color-secondary: #c18d15;
-  --e-global-color-text: #000000;
-  --e-global-color-accent: #c18d15;
+  /* Colors
+  *
+  * global-color = gb-col...
+  * font-size = fs-large...
+  *
+  */
+  --gb-col-primary: #ffffff;
+  --gb-col-secondary: #c18d15;
+  --gb-col-background: #000000;
+  --gb-col-accent: #c18d15;
 
   /* fonts */
-  --e-global-typography-primary-font-family: "Montserrat";
-  --e-global-typography-primary-font-weight: 600;
-  --e-global-typography-secondary-font-family: "Montserrat";
-  --e-global-typography-secondary-font-weight: 400;
-  --e-global-typography-text-font-family: "Montserrat";
-  --e-global-typography-text-font-weight: 400;
-  --e-global-typography-accent-font-family: "Montserrat";
-  --e-global-typography-accent-font-weight: 500;
+  --fs-large: calc(3.2rem + 3.4vw);
+  --fs-small: calc(1.4rem);
 }
 
 @font-face {
@@ -25,7 +25,132 @@
     url(/resources/fonts/Lakeside/Lakeside-Regular.ttf) format("truetype");
 }
 
+/* Global */
 html {
   /* 1rem = 10px [Experimental] */
   font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--gb-col-primary);
+  line-height: 1.5;
+  width: 100vw;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  min-width: 6.4rem;
+  height: auto;
+}
+
+svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  z-index: 2;
+  background-color: var(--gb-col-background);
+  box-shadow: 0px 2px 12px 6px hsla(0, 0%, 0%, 0.8);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  & .menu,
+  & .cta {
+    height: 100%;
+    width: 15%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+  }
+
+  & header {
+    height: 100%;
+    width: 70%;
+    text-align: center;
+  }
+
+  & .icon > svg {
+    fill: var(--gb-col-primary);
+  }
+
+  & .cta > svg {
+    fill: var(--gb-col-accent);
+  }
+}
+
+header h1 {
+  font-family: "Lakesides", serif;
+  font-size: var(--fs-large);
+  font-weight: 500;
+  line-height: 0;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 50rem;
+  top: 8rem;
+  left: 0;
+  display: grid;
+  place-content: center;
+
+  & .hero__img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      width: 50%;
+      object-fit: cover;
+    }
+
+    & .hero__title {
+      text-align: center;
+      width: 100%;
+
+      & h2 {
+        font-size: var(--fs-small);
+        text-transform: uppercase;
+        color: var(--gb-col-accent);
+        letter-spacing: 0.15rem;
+        line-height: 1;
+        max-width: 60%;
+        margin-inline: auto;
+      }
+    }
+  }
+}
+
+.hero__video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  & video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
