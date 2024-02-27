@@ -23,10 +23,15 @@
 
   /* fonts */
   --fs-large: calc(3.2rem + 3.4vw);
-  --fs-small: calc(1.4rem);
+  --fs-medium: calc(1.6rem + 1.4vw);
+  --fs-small: calc(1.2rem + 0.5vw);
 
   --ff-monserrat: "Montserrat", sans-serif;
   --ff-lakesides: "Lakesides", serif;
+
+  /* img */
+  --img-basement-bar: url("/resources/img/Covent-Garden-Social-Club-Basement-Bar-Drinks-1536x1536.jpg");
+  --img-piano-bar: url("/resources/img/cocktails-covernt-garden-social-club.webp");
 }
 
 /* Global */
@@ -44,7 +49,7 @@ body {
   color: var(--gb-col-primary);
   line-height: 1.5;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 img {
@@ -194,5 +199,50 @@ header h1 {
     color: var(--gb-col-tertiary);
     font-weight: 500;
     margin-bottom: 2rem;
+  }
+}
+
+/* bar */
+
+
+.bar {
+  width: 100%;
+
+  & > div {
+    width: 100%;
+    height: 22.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.125rem;
+
+    background-size: cover;
+    background-position: center center;
+
+    & > .bar__text-box {
+      width: 100%;
+
+      & > p {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+        font-size: var(--fs-medium);
+        text-transform: uppercase;
+      }
+
+      & > p:first-child {
+        font-weight: 700;
+      }
+    }
+  }
+
+  & div.bar__piano {
+    background-image: var(--img-basement-bar);
+  }
+
+  & div.bar__basement {
+    background-image: var(--img-piano-bar);
   }
 }
