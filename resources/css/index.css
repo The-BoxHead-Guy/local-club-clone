@@ -24,7 +24,7 @@
   /* fonts */
   --fs-large: calc(3.2rem + 3.4vw);
   --fs-medium: calc(1.6rem + 1.4vw);
-  --fs-small: calc(1.2rem + 0.5vw);
+  --fs-small: calc(1.12rem + 0.5vw);
 
   --ff-monserrat: "Montserrat", sans-serif;
   --ff-lakesides: "Lakesides", serif;
@@ -32,12 +32,22 @@
   /* img */
   --img-basement-bar: url("/resources/img/Covent-Garden-Social-Club-Basement-Bar-Drinks-1536x1536.jpg");
   --img-piano-bar: url("/resources/img/cocktails-covernt-garden-social-club.webp");
+  --img-logo-patterns: url("/resources/img/CGSC-Web-Pattern-White.png");
 }
 
 /* Global */
 html {
   /* 1rem = 10px [Experimental] */
   font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 body {
@@ -177,7 +187,7 @@ header h1 {
   text-align: center;
   margin: 0;
 
-  background-image: url(/resources/img/CGSC-Web-Pattern-White.png);
+  background-image: var(--img-logo-patterns);
   background-color: var(--gb-col-secondary);
   background-size: cover;
 
@@ -263,5 +273,66 @@ button.btn {
 
   & div.bar__basement {
     background-image: var(--img-piano-bar);
+  }
+}
+
+/* Opt for membership section */
+.membership {
+  background-image: var(--img-logo-patterns);
+  background-color: var(--gb-col-tertiary);
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2.5rem 0;
+
+  & .membership__header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3,
+    p {
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    & > h3 {
+      font-size: var(--fs-medium);
+    }
+
+    & > p {
+      font-size: 1.2rem;
+      width: 65%;
+    }
+  }
+
+  & .membership__img-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    & > .membership__img {
+      width: fit-content;
+      object-fit: cover;
+      padding: 2.5rem;
+    }
+  }
+
+  & article {
+    width: 85%;
+    text-align: center;
+    font-size: var(--fs-small);
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
   }
 }
