@@ -486,6 +486,12 @@ footer {
       width: 100%;
     }
   }
+
+  hr {
+    width: 10%;
+    border: 1px solid var(--gb-col-tertiary);
+    margin: 3rem 0;
+  }
 }
 
 .op-hours {
@@ -583,7 +589,6 @@ footer {
   text-align: center;
   font-size: 1.1rem;
   color: var(--gb-col-tertiary);
-  margin-top: 3rem;
 
   & a {
     color: var(--gb-col-tertiary);
