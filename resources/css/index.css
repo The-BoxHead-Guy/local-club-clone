@@ -91,6 +91,10 @@ footer {
   left: 0;
 }
 
+.hidden__desktop {
+  display: none;
+}
+
 /* Navigation */
 nav > .mobile,
 nav {
@@ -614,6 +618,10 @@ footer {
     display: none !important;
   }
 
+  .hidden__desktop {
+    display: block;
+  }
+
   .desktop {
     display: flex;
     justify-content: space-between;
@@ -687,6 +695,24 @@ footer {
         letter-spacing: 1.5px;
         text-transform: uppercase;
       }
+    }
+  }
+
+  .hero__title {
+    & span {
+      font-size: 10rem;
+      font-family: var(--ff-lakesides);
+      letter-spacing: 1px;
+      line-height: 1.1;
+    }
+  }
+
+  .hero {
+    min-height: 60rem;
+
+    & .hero__img-container > .hero__title > h2 {
+      max-width: 100%;
+      font-size: 1.6rem;
     }
   }
 }
