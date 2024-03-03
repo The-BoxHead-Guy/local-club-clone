@@ -79,6 +79,11 @@ svg {
   height: 2rem;
 }
 
+a {
+  text-decoration: none;
+  color: var(--gb-col-primary);
+}
+
 section,
 footer {
   position: relative;
@@ -87,6 +92,7 @@ footer {
 }
 
 /* Navigation */
+nav > .mobile,
 nav {
   position: fixed;
   top: 0;
@@ -594,5 +600,93 @@ footer {
     color: var(--gb-col-tertiary);
     text-decoration: none;
     font-weight: bold;
+  }
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  .mobile,
+  nav > .mobile {
+    display: none;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    & .desktop__logo-container {
+      width: 10%;
+      height: 100%;
+      position: relative;
+      padding: 0 1rem;
+
+      & img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    & .desktop__links-container {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+      gap: 0.75rem;
+      flex-grow: 1;
+
+      & li {
+        padding: 0 3rem;
+      }
+
+      & a {
+        text-decoration: none;
+        color: var(--gb-col-primary);
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    & .desktop__cta {
+      background-color: var(--gb-col-secondary);
+      color: var(--gb-col-primary);
+      width: 20%;
+      max-width: 16rem;
+      height: 4rem;
+      margin: 0 4.5rem;
+      display: grid;
+      place-content: center;
+
+      &:hover {
+        background-color: var(--gb-col-primary);
+        color: var(--gb-col-tertiary);
+      }
+
+      &::before {
+        content: "Book now";
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+    }
   }
 }
