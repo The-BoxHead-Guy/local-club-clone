@@ -715,4 +715,19 @@ footer {
       font-size: 1.6rem;
     }
   }
+
+  .about {
+    padding: 3.75rem 0;
+
+    & .about__title {
+      font-weight: 800;
+      font-size: 1.8rem;
+    }
+
+    & .about__text {
+      width: 70%;
+      line-height: 1.5;
+      font-size: 1.6rem;
+    }
+  }
 }
