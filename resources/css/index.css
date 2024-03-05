@@ -804,4 +804,33 @@ footer {
       transform: translateX(-50%);
     }
   }
+
+  .demo {
+    & h3 {
+      font-size: 2.2rem;
+    }
+
+    & .demo__container {
+      grid-template-columns: repeat(4, 1fr);
+      width: 94%;
+    }
+  }
+
+  .gallery {
+    & .gallery__container {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 2rem 0;
+      width: 70%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .demo {
+    padding: 5rem 0;
+
+    .demo__container {
+      width: 80%;
+    }
+  }
 }
