@@ -30,7 +30,7 @@
   --ff-lakesides: "Lakesides", serif;
 
   /* img */
-  --img-basement-bar: url("/resources/img/Covent-Garden-Social-Club-Basement-Bar-Drinks-1536x1536.jpg");
+  --img-basement-bar: url("/resources/img/Covent-Garden-Social-Club-Members-Private-Hire-Spaces-300x300.jpg");
   --img-piano-bar: url("/resources/img/cocktails-covernt-garden-social-club.webp");
   --img-logo-patterns: url("/resources/img/CGSC-Web-Pattern-White.png");
 }
@@ -745,5 +745,17 @@ footer {
       line-height: 1.5;
       font-size: 1.6rem;
     }
+  }
+
+  .bar {
+    display: flex;
+
+    & > div {
+      height: 27.5rem;
+    }
+  }
+
+  section.bar div.bar__text-box > p {
+    font-size: 1.8rem;
   }
 }
