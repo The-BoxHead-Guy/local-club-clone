@@ -758,4 +758,50 @@ footer {
   section.bar div.bar__text-box > p {
     font-size: 1.8rem;
   }
+
+  .membership {
+    display: grid;
+    grid-template-areas:
+      "header header header header header"
+      "image image image text text"
+      ". . . cta cta";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 8rem 26rem 4rem;
+
+    & .membership__header {
+      grid-area: header;
+
+      & > h3 {
+        font-size: var(--fs-small);
+      }
+    }
+
+    & .membership__img-container {
+      grid-area: image;
+      width: 90%;
+      margin-inline: auto;
+
+      & .membership__img {
+        padding: 1rem;
+      }
+    }
+
+    & article {
+      grid-area: text;
+      margin-inline: auto;
+      width: 100%;
+
+      & p {
+        width: 75%;
+        font-size: 1.4rem;
+        margin-inline: auto;
+      }
+    }
+
+    & button.btn {
+      grid-area: cta;
+      margin-inline-start: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
