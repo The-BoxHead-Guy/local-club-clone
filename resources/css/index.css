@@ -30,7 +30,7 @@
   --ff-lakesides: "Lakesides", serif;
 
   /* img */
-  --img-basement-bar: url("/resources/img/Covent-Garden-Social-Club-Basement-Bar-Drinks-1536x1536.jpg");
+  --img-basement-bar: url("/resources/img/Covent-Garden-Social-Club-Members-Private-Hire-Spaces-300x300.jpg");
   --img-piano-bar: url("/resources/img/cocktails-covernt-garden-social-club.webp");
   --img-logo-patterns: url("/resources/img/CGSC-Web-Pattern-White.png");
 }
@@ -640,23 +640,37 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transition: all 0.3s ease-in-out;
+
+        @media screen and (min-width: 1024px) {
+          min-width: 8rem;
+        }
       }
     }
 
     & .desktop__links-container {
-      width: 50%;
+      width: 70%;
       height: 100%;
       display: flex;
       justify-content: flex-start;
       flex-wrap: wrap;
       align-items: center;
       align-content: center;
-      text-align: center;
-      gap: 0.75rem;
-      flex-grow: 1;
 
       & li {
-        padding: 0 3rem;
+        padding: 0.5rem 3rem;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--gb-col-primary);
+          color: var(--gb-col-tertiary);
+        }
+
+        &:hover a {
+          color: var(--gb-col-tertiary);
+        }
       }
 
       & a {
@@ -666,9 +680,14 @@ footer {
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1px;
+        padding: 1rem;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
 
         &:hover {
-          text-decoration: underline;
+          color: var(--gb-col-tertiary);
         }
       }
     }
@@ -682,6 +701,8 @@ footer {
       margin: 0 4.5rem;
       display: grid;
       place-content: center;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
 
       &:hover {
         background-color: var(--gb-col-primary);
@@ -691,7 +712,7 @@ footer {
       &::before {
         content: "Book now";
         font-size: 1.2rem;
-        font-weight: 600;
+        font-weight: 750;
         letter-spacing: 1.5px;
         text-transform: uppercase;
       }
@@ -713,6 +734,144 @@ footer {
     & .hero__img-container > .hero__title > h2 {
       max-width: 100%;
       font-size: 1.6rem;
+    }
+  }
+
+  .about {
+    padding: 3.75rem 0;
+
+    & .about__title {
+      font-weight: 800;
+      font-size: 1.8rem;
+    }
+
+    & .about__text {
+      width: 70%;
+      line-height: 1.5;
+      font-size: 1.6rem;
+    }
+  }
+
+  .bar {
+    display: flex;
+
+    & > div {
+      height: 27.5rem;
+    }
+  }
+
+  section.bar div.bar__text-box > p {
+    font-size: 1.8rem;
+  }
+
+  .membership {
+    display: grid;
+    grid-template-areas:
+      "header header header header header"
+      "image image image text text"
+      ". . . cta cta";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 8rem 26rem 4rem;
+
+    & .membership__header {
+      grid-area: header;
+
+      & > h3 {
+        font-size: var(--fs-small);
+      }
+    }
+
+    & .membership__img-container {
+      grid-area: image;
+      width: 90%;
+      margin-inline: auto;
+
+      & .membership__img {
+        padding: 1rem;
+      }
+    }
+
+    & article {
+      grid-area: text;
+      margin-inline: auto;
+      width: 100%;
+
+      & p {
+        width: 75%;
+        font-size: 1.4rem;
+        margin-inline: auto;
+      }
+    }
+
+    & button.btn {
+      grid-area: cta;
+      margin-inline-start: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .demo {
+    & h3 {
+      font-size: 2.2rem;
+    }
+
+    & .demo__container {
+      grid-template-columns: repeat(4, 1fr);
+      width: 94%;
+    }
+  }
+
+  .gallery {
+    & .gallery__container {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 2rem 0;
+      width: 70%;
+    }
+  }
+
+  .footer {
+    & .footer__nav > ul > li > a {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    & .op-hours {
+      & h4,
+      & p {
+        font-size: 1.4rem;
+      }
+    }
+
+    & .op-hours__container,
+    & .details__container {
+      display: flex;
+      justify-content: space-around;
+
+      & div {
+        max-width: 50%;
+        flex-grow: 1;
+
+        & p {
+          width: 80%;
+          margin-inline: auto;
+        }
+      }
+    }
+
+    & .details__container {
+      width: 80%;
+      margin-inline: auto;
+      margin-top: 3rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .demo {
+    padding: 5rem 0;
+
+    .demo__container {
+      width: 80%;
     }
   }
 }
