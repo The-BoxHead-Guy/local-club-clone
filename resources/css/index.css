@@ -894,4 +894,16 @@ footer {
       }
     }
   }
+
+  & .footer {
+    & .footer__nav {
+      & a {
+        transition: all 0.3s ease-in-out;
+      }
+
+      & a:hover {
+        color: var(--gb-col-primary);
+      }
+    }
+  }
 }
