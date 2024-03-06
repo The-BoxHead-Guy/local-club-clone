@@ -895,6 +895,26 @@ footer {
     }
   }
 
+  & .gallery {
+    & h3 {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--gb-col-accent);
+      }
+    }
+  }
+
+  & .gallery__img {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  & .gallery__img:hover {
+    transform: translateY(-12px);
+  }
+
   & .footer {
     & .footer__nav {
       & a {
