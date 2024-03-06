@@ -640,11 +640,16 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transition: all 0.3s ease-in-out;
+
+        @media screen and (min-width: 1024px) {
+          min-width: 8rem;
+        }
       }
     }
 
     & .desktop__links-container {
-      width: 60%;
+      width: 70%;
       height: 100%;
       display: flex;
       justify-content: flex-start;
@@ -821,6 +826,42 @@ footer {
       grid-template-columns: repeat(4, 1fr);
       padding: 2rem 0;
       width: 70%;
+    }
+  }
+
+  .footer {
+    & .footer__nav > ul > li > a {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    & .op-hours {
+      & h4,
+      & p {
+        font-size: 1.4rem;
+      }
+    }
+
+    & .op-hours__container,
+    & .details__container {
+      display: flex;
+      justify-content: space-around;
+
+      & div {
+        max-width: 50%;
+        flex-grow: 1;
+
+        & p {
+          width: 80%;
+          margin-inline: auto;
+        }
+      }
+    }
+
+    & .details__container {
+      width: 80%;
+      margin-inline: auto;
+      margin-top: 3rem;
     }
   }
 }
