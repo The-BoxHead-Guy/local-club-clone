@@ -872,6 +872,58 @@ footer {
 
     .demo__container {
       width: 80%;
+
+      .demo__card {
+        cursor: pointer;
+
+        & h3 {
+          transition: color 0.3s ease-in-out;
+        }
+
+        &:hover > h3 {
+          color: var(--gb-col-tertiary);
+        }
+
+        & img {
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            transform: translateY(-12px);
+          }
+        }
+      }
+    }
+  }
+
+  & .gallery {
+    & h3 {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--gb-col-accent);
+      }
+    }
+  }
+
+  & .gallery__img {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  & .gallery__img:hover {
+    transform: translateY(-12px);
+  }
+
+  & .footer {
+    & .footer__nav {
+      & a {
+        transition: all 0.3s ease-in-out;
+      }
+
+      & a:hover {
+        color: var(--gb-col-primary);
+      }
     }
   }
 }
