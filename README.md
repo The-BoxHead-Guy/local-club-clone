@@ -8,3 +8,7 @@
 ### Original link of the website
 
 [Covent Garden Social Club](https://coventgardensocialclub.co.uk/)
+
+<hr>
+
+Live Preview: [Covent Garden Social Club (cloned)](https://local-club-clone.vercel.app/)
